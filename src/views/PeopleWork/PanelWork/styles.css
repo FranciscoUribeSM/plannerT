@@ -1,0 +1,47 @@
+/*** PANEL  *******************************************************************/
+.Panel-Content{
+    /* background: red;  */
+
+    height: calc(100vh - 50px); 
+    width: 300px;
+    border: #f7f6f6 solid 1px; 
+    box-shadow: 1px 0px 5px -1px rgba(0,0,0,0.34);
+}
+
+.Panel-Switch{
+    height: 30px;
+    background: white;
+    color: #505050; 
+    /* font-family:'Open Sans', 'Helvetica Neue', 'sans-serif' ; */
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    /* border: black solid 1px;  */
+
+}
+
+.Panel-Switch-Option{
+    border: #f7f6f6 solid 1px; 
+    font-size: 14px; 
+    width: 50%;
+    height: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-width:1px 0px; 
+    cursor: pointer;
+    position: relative;
+}
+.Panel-Option-Active{
+    border-bottom: #f26b3a solid 3px; 
+}
+.Panel-Switch-Option:hover{
+    background: #f7f6f6;
+}
+.icon-notific-friends{
+    font-size: 15px; 
+    position: absolute;
+    right: 30px;
+    color: #ccc; 
+}
+

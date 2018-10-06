@@ -1,0 +1,80 @@
+html, body{
+    width: 100%; 
+    overflow-x: hidden; 
+    margin:0; 
+}
+
+.Login{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+}
+.Login-box{
+    display: flex; 
+    flex-direction: column; 
+
+}
+.card .card-content{
+    border-top: #f26b3a solid 3px; 
+}
+.fab{
+    padding-left: 5px;
+}
+
+.card-content{
+    display:flex; 
+    flex-direction: column; 
+    height: 420px;
+    align-items: center; 
+}
+.Login-Button-Social{
+    width: 200px; 
+}
+
+/* --- FORMULARIO */
+
+.Login-input:focus{
+    border-bottom: 1px solid #f26b3a !important; 
+    -webkit-box-shadow: 0 1px 0 0 #f26b3a;
+    box-shadow: 0 1px 0 0 #f26b3a !important;
+}
+.Login-Form-Container{
+    padding-top: 30px;
+    width: 250px;  
+
+}
+.Login-Content-Button{
+    text-align: center; 
+}
+
+.Login-Button{
+    background: #f26b3a; 
+    color:white; 
+    border: none; 
+    border-radius: 2px; 
+    width: 70%; 
+    height: 30px;
+    margin-top:30px; 
+    
+}
+/* .Login-Button:active{
+    background: #d13e08; 
+} */
+
+
+.btn-floating.btn-large i{
+    background:  #f26b3a; 
+
+}
+.btn-floating.btn-large{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 15px; 
+}
+.fab{
+    position: absolute;
+    left: 10px;
+
+}

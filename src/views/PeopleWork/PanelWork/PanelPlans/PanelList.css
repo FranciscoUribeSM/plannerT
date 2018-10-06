@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.List-Head{
+    display: flex; 
+    justify-content:flex-end;
+    align-items: center; 
+    padding: 3px;
+    border-bottom: #f7f6f6 solid 1px;
+    
+}
+.List-Head-Icon{
+    margin-right: 5px; 
+    font-size: 22px;
+    color: #ccc; 
+}
+.List-Head-Icon:hover{
+    margin-right: 5px; 
+    font-size: 22px;
+    color: #505050; 
+    cursor: pointer;
+}
+.Plan-Content{
+    height: 55px;
+    width: 100%;
+    margin: 0; 
+    display: flex;
+    padding-left: 40px; 
+    align-items: center;
+    border: #f7f6f6 solid 1px; 
+    font-size: 14px; 
+    
+}
+.Plan-Icon-Arrow{
+    position: absolute;
+    left:17px; 
+    margin-top:0px; 
+    color: #505050;
+    font-size: 21px; 
+    animation: 0ms  
+}
+.Plan-Content:hover{
+    background: #e2e0e0;
+    cursor: pointer;
+}
+
+.List-Footer{
+    height: 30px;
+    width: 300px; 
+    position: absolute;
+    bottom:0; 
+    background: #303030;
+    color:white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer;
+}
+.Plan-Active{
+    animation: OpenListAnimate 0.3s;
+    transform: rotate(90deg);
+}
+.Plan-In-Active{
+    animation: CloseListAnimate 0.3s;
+    transform: rotate(0deg);
+}
+@keyframes OpenListAnimate {
+    from {    transform: rotate(0deg);}
+    to {transform: rotate(90deg);}
+}
+@keyframes CloseListAnimate {
+    from {    transform: rotate(90deg);}
+    to {transform: rotate(0deg);}
+}
+
+
+.List-Content{
+    display: flex;
+    align-items: center; 
+    height: 35px;
+    padding-left: 70px;
+    cursor: pointer;
+    position: relative;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 14px;
+}
+.Panel-One-Plan{
+    animation: OpenPlans 0.3s;
+    height: auto;
+}
+@keyframes OpenPlans {
+    from {height: 0px; }
+    to {height: auto;}
+}
+
+.List-Content:hover{
+    background: #f7f6f6;
+}
+
+.List-Option{
+    position: absolute;
+    color:#6e6d6d;
+    right: 10px;
+    font-size: 20px;
+}
+.List-Option:hover{
+    color:#505050;
+
+}
