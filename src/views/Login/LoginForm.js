@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import 'materialize-css/dist/css/materialize.min.css'; 
 class LoginForm extends Component {
     render() {
@@ -23,8 +23,8 @@ class LoginForm extends Component {
     }
 }
 
-LoginForm.propTypes = {
+// LoginForm.propTypes = {
 
-};
+// };
 
 export default LoginForm;

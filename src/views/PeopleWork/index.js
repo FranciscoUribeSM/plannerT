@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import HeaderWork from './HeaderWork'; 
+import { connect } from 'react-redux'; 
+import { bindActionCreators } from 'redux';  
 import BodyWork from './BodyWork'; 
 import PanelWork from './PanelWork/'; 
-import {Redirect} from 'react-router-dom'
+import {getUser} from './../../actions'
+import {Redirect} from 'react-router-dom'; 
 import './styles.css'
 
 class PeopleWork extends Component {
@@ -15,12 +17,13 @@ class PeopleWork extends Component {
             fullName: '',
             isLogout: false
           }
-      
+          
           this.onLogout = this.onLogout.bind(this); 
 
     }
     componentDidMount(){
- 
+      this.props.getUser(); 
+      console.log(this.props)
         let fbData = JSON.parse(localStorage.getItem('fbData')); 
         let googleData = JSON.parse(localStorage.getItem('googleData')); 
   
@@ -40,7 +43,6 @@ class PeopleWork extends Component {
             fullName: googleData.name
           })
         }
-  
     }
 
     onLogout(e){
@@ -69,8 +71,22 @@ class PeopleWork extends Component {
     }
 }
 
-PeopleWork.PeopleWork = {
+// PeopleWork.PeopleWork = {
 
-};
+// };
+const mapStateToProps = (state)=> {
+  console.log(state)
+  return {
+  //    router: state.routes,
+     lists: state.getUser
+  }
+}
+ 
+const mapDispatchToProps= (dispatch) => {
+     return bindActionCreators({
+      getUser
+     }, dispatch);
+}
 
-export default PeopleWork;
+export default connect(mapStateToProps, mapDispatchToProps)(PeopleWork)
+

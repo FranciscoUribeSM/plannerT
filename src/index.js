@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import registerServiceWorker from './registerServiceWorker'
 
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
 import { routerMiddleware } from 'react-router-redux'
@@ -14,10 +14,11 @@ import reducers from './reducers'
 
 const history = createHistory()
 const middleware = [routerMiddleware(history),thunk];
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; 
 
 const store = createStore(
   reducers,
-  applyMiddleware(...middleware)
+  composeEnhancers(applyMiddleware(...middleware))
 )
 
 ReactDOM.render(

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ListContent from './ListContent'; 
 import './PanelList.css'; 
 
@@ -12,7 +12,7 @@ class PlanContent extends Component {
             return <ListContent key={index} ListTitle={lista} />
     
         })
-        if(List.length == 0){
+        if(List.length === 0){
             ListRender =<p>Without List</p>; 
         }
         console.log(List)
@@ -29,7 +29,7 @@ class PlanContent extends Component {
                     </div>  
                     
                 </div>
-                {stateClass=='Plan-Active' ?
+                {stateClass==='Plan-Active' ?
                     <div className="Panel-One-Plan">{this.renderList(Tasks)}</div>:
                     <div></div>
                 }
@@ -39,8 +39,8 @@ class PlanContent extends Component {
     }
 }
 
-PlanContent.propTypes = {
+// PlanContent.propTypes = {
 
-};
+// };
 
 export default PlanContent;

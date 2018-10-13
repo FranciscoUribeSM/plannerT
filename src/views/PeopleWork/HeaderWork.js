@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './styles.css'; 
 
 class HeaderWork extends Component {
-    constructor(props){
-        super(props);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
     render() {
         return (
             <div>
@@ -20,7 +20,7 @@ class HeaderWork extends Component {
                     <div className='Header-Left-Title'> 
                     <i className=" material-icons">settings</i>
                     <i className="material-icons">notifications</i>
-                        <img onClick={this.props.Logout} className="Header-Avatar-Img" src={this.props.profileImage} atl="Perfil" />
+                        <img alt="asd" onClick={this.props.Logout} className="Header-Avatar-Img" src={this.props.profileImage} atl="Perfil" />
                     </div>
                     
                 </div>
@@ -29,8 +29,8 @@ class HeaderWork extends Component {
     }
 }
 
-HeaderWork.propTypes = {
+// HeaderWork.propTypes = {
 
-};
+// };
 
 export default HeaderWork;

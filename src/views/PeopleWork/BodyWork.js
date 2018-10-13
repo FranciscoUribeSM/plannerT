@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './styles.css'; 
 class BodyWork extends Component {
     render() {
@@ -15,8 +15,8 @@ class BodyWork extends Component {
     }
 }
 
-BodyWork.propTypes = {
+// BodyWork.propTypes = {
 
-};
+// };
 
 export default BodyWork;

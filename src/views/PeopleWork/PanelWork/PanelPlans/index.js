@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import PlanContent from './PlanContent'
 import './PanelList.css';
 
@@ -69,8 +69,8 @@ class PanelPlans extends Component {
     }
 }
 
-PanelPlans.propTypes = {
+// PanelPlans.propTypes = {
 
-};
+// };
 
 export default PanelPlans;

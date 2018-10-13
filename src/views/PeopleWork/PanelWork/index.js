@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './styles.css'; 
 import PanelPlans from './PanelPlans'; 
 import PanelSocial from './PanelSocial'
@@ -56,8 +56,8 @@ class PanelWork extends Component {
     }
 }
 
-PanelWork.propTypes = {
+// PanelWork.propTypes = {
 
-};
+// };
 
 export default PanelWork;

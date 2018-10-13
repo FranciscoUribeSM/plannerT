@@ -3,7 +3,6 @@ import { Route, Router } from 'react-router'
 import PropTypes from 'prop-types'
 import './App.css'
 import Login from './views/Login/Login'
-import Home from './views/Home'
 import PeopleWork from './views/PeopleWork'; 
  //697406327288401
 

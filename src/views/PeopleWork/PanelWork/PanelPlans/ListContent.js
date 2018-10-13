@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './PanelList.css'; 
 class Listcontent extends Component {
-    constructor(props){
-        super(props); 
-    }
+    // constructor(props){
+    //     super(props); 
+    // }
     render() {
         return (
             <div>
@@ -17,8 +17,8 @@ class Listcontent extends Component {
     }
 }
 
-Listcontent.propTypes = {
+// Listcontent.propTypes = {
 
-};
+// };
 
 export default Listcontent;

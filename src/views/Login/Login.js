@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import FacebookLogin from 'react-facebook-login'
 import { Redirect } from 'react-router-dom'
 import GoogleLogin from 'react-google-login'
 import LoginForm from './LoginForm'; 
-
+import { connect } from 'react-redux'; 
+import { bindActionCreators } from 'redux';  
+import {login} from './../../actions'
 import 'materialize-css/dist/css/materialize.min.css'; 
 import './index.css'; 
 // 242978434148-kccls9ln8mhmquur37d0ra7p5pd9nl53.apps.googleusercontent.com
@@ -34,6 +36,12 @@ class Login extends Component {
        this.setState({
            isLogged: true,
        })
+        let usuario={
+            nombre:response.name,
+            email:response.email,
+            password:'123'
+        }
+        this.props.login(usuario); 
     }
     onFailure(err){
         console.log(err);
@@ -47,6 +55,13 @@ class Login extends Component {
             social: 'google'
         }))
         this.setState({isLogged: true})
+        let usuario={
+            nombre:response.profileObj.name,
+            correo:response.profileObj.email,
+            password:'123'
+        }
+        this.props.login(usuario); 
+        // console.log(response)
     }
 
     componentWillMount(){
@@ -78,6 +93,7 @@ class Login extends Component {
                         />
                         ó
                             <br/>
+                            
                             <GoogleLogin 
                                 clientId="242978434148-1pgbntqcqa7d3qa819dbsfmsu215fdfu.apps.googleusercontent.com"
                                 autoload={ false }
@@ -101,8 +117,22 @@ class Login extends Component {
     }
 }
 
-Login.propTypes = {
+// Login.propTypes = {
 
-};
+// };
 
-export default Login;
+const mapStateToProps = (state)=> {
+  
+    return {
+    //    router: state.routes,
+    //    songs: state.login
+    }
+}
+   
+const mapDispatchToProps= (dispatch) => {
+       return bindActionCreators({
+        login
+       }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

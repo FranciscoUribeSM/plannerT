@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 class PanelSocial extends Component {
     render() {
@@ -11,8 +11,8 @@ class PanelSocial extends Component {
     }
 }
 
-PanelSocial.propTypes = {
+// PanelSocial.propTypes = {
 
-};
+// };
 
 export default PanelSocial;
